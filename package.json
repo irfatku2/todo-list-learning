@@ -1,0 +1,26 @@
+{
+  "name": "todo-list-learning",
+  "version": "1.0.0",
+  "description": "Repository for learning FE",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irfatku2/todo-list-learning.git"
+  },
+  "author": "Ilias Fatkullin <fatkullin_ilia@mail.ru>",
+  "bugs": {
+    "url": "https://github.com/irfatku2/todo-list-learning/issues"
+  },
+  "homepage": "https://github.com/irfatku2/todo-list-learning#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6"
+  }
+}
