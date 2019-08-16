@@ -16,10 +16,9 @@
   },
   "homepage": "https://github.com/irfatku2/todo-list-learning#readme",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "babel-loader": "^8.0.6",
-    "babel-preset-env": "^1.7.0",
+    "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^3.0.0",
+    "typescript": "^3.5.3",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6"
   }

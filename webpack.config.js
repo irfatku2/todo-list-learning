@@ -1,5 +1,6 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
     entry: './src/index.ts',
@@ -7,19 +8,19 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'babel-loader',
-                exclude: /node_modules/
+                loader: 'awesome-typescript-loader'
             }
         ]
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js']
+        extensions: ['.tsx', '.ts', '.js', '.jsx']
     },
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new CheckerPlugin()
     ]
 };
