@@ -1,0 +1,30 @@
+.todo-element {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin: 2px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+    align-items: center;
+}
+
+.title {
+    font-family: cursive;
+    font-size: 1.3rem;
+}
+
+.delete-icon {
+    width: 24px;
+    height: 24px;
+    background: url("assets/delete-24px.svg") no-repeat;
+
+    &&:hover {
+        filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.4));
+    }
+
+    &&:active {
+        margin-bottom: -1px;
+        filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 1));
+    }
+}

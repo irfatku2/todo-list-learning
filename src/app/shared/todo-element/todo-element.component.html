@@ -1,0 +1,7 @@
+<div class="todo-element" [style.background]="todo.completed?'#c7c3c3':'none'">
+    <input type="checkbox" [(ngModel)]="todo.completed">
+    <span class="title">
+        {{todo.title}}
+    </span>
+    <i class="delete-icon"></i>
+</div>
