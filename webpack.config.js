@@ -5,7 +5,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/index.ts',
+    entry: {
+        'polyfills': './src/polyfills.ts',
+        'app': './src/index.ts'
+    }, 
     module: {
         rules: [
             {
@@ -18,7 +21,7 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                use: ['style-loader', 'css-loader', 'less-loader']
+                use: ['to-string-loader', 'css-loader', 'less-loader']
             },
             // workaround for warning: System.import() is deprecated and will be removed soon. Use import() instead.
             {
@@ -31,7 +34,7 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js', '.jsx']
     },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     optimization: {
