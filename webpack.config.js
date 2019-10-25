@@ -8,7 +8,7 @@ module.exports = {
     entry: {
         'polyfills': './src/polyfills.ts',
         'app': './src/index.ts'
-    }, 
+    },
     module: {
         rules: [
             {
@@ -22,6 +22,10 @@ module.exports = {
             {
                 test: /\.less$/,
                 use: ['to-string-loader', 'css-loader', 'less-loader']
+            },
+            {
+                test: /\.svg$/,
+                use: ['file-loader'],
             },
             // workaround for warning: System.import() is deprecated and will be removed soon. Use import() instead.
             {

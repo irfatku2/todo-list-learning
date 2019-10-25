@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { todos } from 'app/models/todos';
+import { TODOS } from '../../models/todos';
 
 @Component({
     selector: 'todo-list',
@@ -7,5 +7,5 @@ import { todos } from 'app/models/todos';
     styleUrls: ['todo-list.component.less']
 })
 export class TodoListComponent {
-    todos = todos;
+    todos = TODOS;
 }

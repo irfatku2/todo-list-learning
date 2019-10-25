@@ -2,9 +2,6 @@
     "compileOnSave": false,
     "compilerOptions": {
       "baseUrl": "src",
-      "paths": {
-        "@shared/*": ["app/shared/*"]
-    },
       "outDir": "./dist/out-tsc",
       "sourceMap": true,
       "declaration": false,
@@ -27,4 +24,3 @@
         /* ... */
     }
   }
-  
