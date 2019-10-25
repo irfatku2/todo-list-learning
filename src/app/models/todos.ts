@@ -1,7 +1,7 @@
 import { Todo } from "./todo";
 
 export const TODOS: Todo[] = [
-    { title: 'Buy milk', completed: false },
-    { title: 'Timesheet', completed: false },
-    { title: 'Joker', completed: false },
+    { id: 1, title: 'Buy milk', completed: false },
+    { id: 2, title: 'Timesheet', completed: false },
+    { id: 3, title: 'Joker', completed: false },
 ];

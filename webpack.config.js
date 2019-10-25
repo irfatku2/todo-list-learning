@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
+    devtool: 'source-map',
     entry: {
         'polyfills': './src/polyfills.ts',
         'app': './src/index.ts'

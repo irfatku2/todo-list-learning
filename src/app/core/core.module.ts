@@ -6,7 +6,6 @@ import { CoreRoutingModule } from './core-routing.module';
     imports: [
         CoreRoutingModule
     ],
-    exports: [CoreRoutingModule],
     providers: [],
     bootstrap: []
 })
