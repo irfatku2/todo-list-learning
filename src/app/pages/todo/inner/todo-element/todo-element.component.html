@@ -1,0 +1,10 @@
+<div class="todo-element"
+     [ngClass]="{'todo-element_completed': todo.completed}">
+    <c-checkbox [active]="todo.completed"
+                (click)="complete()">
+    </c-checkbox>
+    <span class="title">
+        {{todo.title}}
+    </span>
+    <i class="delete-icon"></i>
+</div>

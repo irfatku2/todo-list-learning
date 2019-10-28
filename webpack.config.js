@@ -25,7 +25,7 @@ module.exports = {
                 use: ['to-string-loader', 'css-loader', 'less-loader']
             },
             {
-                test: /\.svg$/,
+                test: /\.(svg|png)$/,
                 use: ['file-loader'],
             },
             // workaround for warning: System.import() is deprecated and will be removed soon. Use import() instead.
