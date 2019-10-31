@@ -1,6 +1,6 @@
 <div class="todo-list" *ngIf="todos?.length">
     <todo-element *ngFor="let todo of todos; trackBy: trackByFn"
                   [todo]="todo"
-                  (selected)="selected($event)">
+                  (selected)="select.emit($event)">
     </todo-element>
 </div>
