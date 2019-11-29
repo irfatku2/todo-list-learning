@@ -1,0 +1,6 @@
+<div class="todo-form">
+    <form [formGroup]="form" >
+        <input class="todo-form__input" formControlName="todoName" placeholder="New Todo">
+        <button type="submit" class="todo-form__button" (click)="addTodo()">Create</button>
+    </form>
+</div>

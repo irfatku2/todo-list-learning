@@ -1,20 +1,45 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {Todo} from "./models/todo";
-import {TODOS} from "./models/todos";
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from "@angular/core";
+import { Subscription } from "rxjs";
+import { Todo } from "./models/todo";
+import { TodoService } from "./services/todo.service";
 
 @Component({
-    selector: 'todo',
-    templateUrl: 'todo.component.html',
-    styleUrls: ['todo.component.less'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    selector: "todo",
+    templateUrl: "todo.component.html",
+    styleUrls: ["todo.component.less"],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TodoComponent {
-    todos: Todo[] = TODOS;
+export class TodoComponent implements OnInit, OnDestroy {
+    todos: Todo[];
+    todosSub: Subscription;
 
-    selected($event: Todo) {
-        this.todos = this.todos.map(todo => {
-            if (todo.id != $event.id) return todo;
-            return {...todo, completed: !todo.completed}
-        });
+    constructor(
+        private todoSvc: TodoService) {
+    }
+
+    ngOnInit() {
+        this.todosSub = this.todoSvc.getTodos().subscribe(
+            (todos) => this.todos = todos
+        );
+    }
+
+    ngOnDestroy() {
+        this.todosSub.unsubscribe();
+    }
+
+    selectTodo($event: Todo) {
+        this.todoSvc.updateTodo($event);
+    }
+
+    createTodo($event: string) {
+        const todo: Todo = {
+            title: $event,
+            completed: false,
+        };
+        this.todoSvc.createTodo(todo);
+    }
+
+    deleteTodo($event: Todo) {
+        this.todoSvc.deleteTodo($event);
     }
 }

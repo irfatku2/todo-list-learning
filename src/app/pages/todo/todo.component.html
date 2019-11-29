@@ -3,6 +3,10 @@
         <div class="title">
             <span class="underlined">TODO</span>
         </div>
-        <todo-list [todos]="todos" (select)=selected($event)></todo-list>
+        <todo-input (todoTitle)="createTodo($event)"></todo-input>
+        <todo-list [todos]="todos"
+                   (select)=selectTodo($event)
+                   (delete)="deleteTodo($event)">
+        </todo-list>
     </div>
 </div>

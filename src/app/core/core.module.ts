@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CoreRoutingModule } from './core-routing.module';
+import { NgModule } from "@angular/core";
+import { CoreRoutingModule } from "./core-routing.module";
 
 @NgModule({
     declarations: [],
