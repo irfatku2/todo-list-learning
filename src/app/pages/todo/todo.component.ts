@@ -6,7 +6,7 @@ import { TodoService } from "./services/todo.service";
 @Component({
     selector: "todo",
     templateUrl: "todo.component.html",
-    styleUrls: ["todo.component.less"],
+    styleUrls: ["todo.component.scss"],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TodoComponent implements OnInit, OnDestroy {
