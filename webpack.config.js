@@ -21,8 +21,8 @@ module.exports = {
                 use: 'html-loader'
             },
             {
-                test: /\.less$/,
-                use: ['to-string-loader', 'css-loader', 'less-loader']
+                test: /\.scss$/,
+                use: ['to-string-loader', 'css-loader', 'sass-loader?sourceMap']
             },
             {
                 test: /\.(svg|png)$/,

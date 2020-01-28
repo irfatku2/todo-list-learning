@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 @Component({
     selector: "todo-input",
     templateUrl: "todo-input.component.html",
-    styleUrls: ["todo-input.component.less"],
+    styleUrls: ["todo-input.component.scss"],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TodoInputComponent {
